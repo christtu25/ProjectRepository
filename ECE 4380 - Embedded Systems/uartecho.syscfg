@@ -1,0 +1,138 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --board "/ti/boards/MSP_EXP432E401Y" --product "simplelink_msp432e4_sdk@4.20.00.12"
+ * @versions {"data":"2020050718","timestamp":"2020050718","tool":"1.5.0+1353","templates":"2020050718"}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const GPIO    = scripting.addModule("/ti/drivers/GPIO");
+const GPIO1   = GPIO.addInstance();
+const GPIO2   = GPIO.addInstance();
+const GPIO3   = GPIO.addInstance();
+const GPIO4   = GPIO.addInstance();
+const GPIO5   = GPIO.addInstance();
+const GPIO6   = GPIO.addInstance();
+const GPIO7   = GPIO.addInstance();
+const GPIO8   = GPIO.addInstance();
+const Power   = scripting.addModule("/ti/drivers/Power");
+const RTOS    = scripting.addModule("/ti/drivers/RTOS");
+const SPI     = scripting.addModule("/ti/drivers/SPI", {}, false);
+const SPI1    = SPI.addInstance();
+const Timer   = scripting.addModule("/ti/drivers/Timer", {}, false);
+const Timer1  = Timer.addInstance();
+const Timer2  = Timer.addInstance();
+const Timer3  = Timer.addInstance();
+const Timer4  = Timer.addInstance();
+const UART    = scripting.addModule("/ti/drivers/UART");
+const UART1   = UART.addInstance();
+const UART2   = UART.addInstance();
+const DHCP    = scripting.addModule("/ti/ndk/DHCP", {}, false);
+const DHCP1   = DHCP.addInstance();
+const General = scripting.addModule("/ti/ndk/General");
+const NIMU    = scripting.addModule("/ti/ndk/NIMU", {}, false);
+const NIMU1   = NIMU.addInstance();
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+GPIO1.$hardware       = system.deviceData.board.components.D1;
+GPIO1.$name           = "CONFIG_GPIO_LED_0";
+GPIO1.gpioPin.$assign = "expansion.87";
+
+GPIO2.$hardware = system.deviceData.board.components.D2;
+GPIO2.$name     = "CONFIG_GPIO_LED_1";
+
+GPIO3.$hardware = system.deviceData.board.components.D3;
+GPIO3.$name     = "CONFIG_GPIO_LED_2";
+
+GPIO4.$hardware = system.deviceData.board.components.D4;
+GPIO4.$name     = "CONFIG_GPIO_LED_3";
+
+GPIO5.mode            = "Output";
+GPIO5.$name           = "CONFIG_GPIO_PK5";
+GPIO5.gpioPin.$assign = "boosterpack2.38";
+
+GPIO6.mode               = "Output";
+GPIO6.$name              = "CONFIG_GPIO_PD4";
+GPIO6.initialOutputState = "High";
+GPIO6.gpioPin.$assign    = "expansion.40";
+
+GPIO7.$hardware = system.deviceData.board.components.USR_SW1;
+GPIO7.$name     = "CONFIG_GPIO_SW1";
+
+GPIO8.$hardware = system.deviceData.board.components.USR_SW2;
+GPIO8.$name     = "CONFIG_GPIO_SW2";
+
+
+SPI1.$name                = "CONFIG_SPI_0";
+SPI1.mode                 = "Four Pin SS Active Low";
+SPI1.duplex               = "Master TX Only";
+SPI1.dmaInterruptPriority = "1";
+SPI1.spi.$assign          = "SSI3";
+SPI1.spi.sclkPin.$assign  = "boosterpack2.7";
+SPI1.spi.mosiPin.$assign  = "boosterpack2.15";
+SPI1.spi.ssPin.$assign    = "boosterpack2.12";
+
+Timer1.timerType = "32 Bits";
+Timer1.$name     = "CONFIG_TIMER_1";
+
+Timer2.$name                       = "CONFIG_TIMER_0";
+Timer2.timerType                   = "32 Bits";
+Timer2.interruptPriority           = "1";
+Timer2.timer.$assignAllowConflicts = "Timer3";
+
+Timer3.$name     = "TICKER_TIMER_1";
+Timer3.timerType = "32 Bits";
+
+Timer4.$name             = "TICKER_TIMER_0";
+Timer4.timerType         = "32 Bits";
+Timer4.interruptPriority = "1";
+Timer4.timer.$assign     = "Timer4";
+
+UART1.$name              = "CONFIG_UART_0";
+UART1.$hardware          = system.deviceData.board.components.XDS110UART;
+UART1.interruptPriority  = "1";
+UART1.ringBufferSize     = 128;
+UART1.uart.$assign       = "UART0";
+UART1.uart.txPin.$assign = "expansion.76";
+UART1.uart.rxPin.$assign = "expansion.74";
+
+UART2.$name              = "CONFIG_UART_1";
+UART2.uart.$assign       = "UART7";
+UART2.uart.txPin.$assign = "boosterpack.4";
+UART2.uart.rxPin.$assign = "boosterpack.3";
+
+DHCP1.$name                 = "CONFIG_DHCPS_0";
+DHCP1.reportLocalDomainName = true;
+DHCP1.reportLocalDNSS       = true;
+
+General.netTaskSchedulerTaskPri = "NC_PRIORITY_HIGH";
+
+NIMU1.$name                  = "CONFIG_NIMU_0";
+DHCP1.NIMU                   = NIMU1;
+NIMU1.localIPAddrConfig      = "Enable Static IP Address";
+NIMU1.staticIPAddr           = "192.168.1.1";
+NIMU1.gatewayIpAddr          = "192.168.1.1";
+NIMU1.emac.$name             = "CONFIG_EMAC_0";
+NIMU1.emac.interruptPriority = "2";
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+GPIO2.gpioPin.$suggestSolution           = "expansion.85";
+GPIO3.gpioPin.$suggestSolution           = "expansion.64";
+GPIO4.gpioPin.$suggestSolution           = "expansion.66";
+GPIO7.gpioPin.$suggestSolution           = "expansion.82";
+GPIO8.gpioPin.$suggestSolution           = "expansion.84";
+RTOS.timer0.resource.$suggestSolution    = "Timer0";
+SPI1.spi.dmaTxChannel.$suggestSolution   = "UDMA_CH15";
+Timer1.timer.$suggestSolution            = "Timer2";
+Timer3.timer.$suggestSolution            = "Timer1";
+NIMU1.emac.emac.$suggestSolution         = "ETHERNET0";
+NIMU1.emac.emac.led0Pin.$suggestSolution = "boosterpack2.39";
+NIMU1.emac.emac.led1Pin.$suggestSolution = "boosterpack2.32";
