@@ -1,0 +1,1 @@
+### Note: Jetson Nano requires .pt file conversion to .wts, then compiled to .engine for proper YOLOv5 implementation.
