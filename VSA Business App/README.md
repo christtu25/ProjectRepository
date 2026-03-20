@@ -1,10 +1,8 @@
 # Signature Audio Mobile App
 
-Public project overview for the Signature Audio mobile application published by Signature Audio, LLC.
-
 ## Overview
 
-The Signature Audio Mobile App is a production mobile application built to improve day-to-day operations for an automotive audio, tint, protection, and service shop. It provides a single platform for customers, shop administrators, and dealership partners to manage appointments, service requests, communication, and account-related workflows from anywhere.
+The VSA Business App is a production mobile application built to improve day-to-day operations for an automotive audio, tint, protection, and service shop. It provides a single platform for customers, shop administrators, and dealership partners to manage appointments, service requests, communication, and account-related workflows from anywhere.
 
 This public repository is intentionally documentation-only. The application source code is private and maintained separately as copyrighted business software.
 
@@ -59,6 +57,6 @@ This repository does not contain application source code. It exists to provide a
 
 ## Copyright
 
-Copyright © Signature Audio, LLC. All rights reserved.
+2026 Copyright © Signature Audio, LLC. All rights reserved.
 
 This application and its associated software, assets, and documentation are proprietary and protected as business intellectual property. No source code is published in this repository.
