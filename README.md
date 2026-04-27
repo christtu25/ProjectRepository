@@ -1,5 +1,9 @@
 # Project Repository
 
+## Professional Publications
+- VSA Business App
+- VSA Website
+
 ## Computer Science Projects
 - Terminal Executable Pet Adoption System
 - HPCC Analysis/Syntax Parser and Multiprocessing
