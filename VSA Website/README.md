@@ -6,7 +6,7 @@ The VSA website is a production web application built for a full-service automot
 
 This public repository is intentionally documentation-only. The application source code is private and maintained separately as proprietary business software.
 
-**Live Site:** Live Site: vsa-website-eight.vercel.app (domain transfer to 'vernonsignatureaudio.com' in progress)
+**Live Site:** Live Site: vernonsignatureaudio.com
 
 ---
 
