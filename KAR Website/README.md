@@ -60,3 +60,5 @@ This repository does not contain application source code. It exists to provide a
 ## Copyright
 
 2026 Copyright © Christian Maldonado. All rights reserved.
+
+This application and its associated software, assets, and documentation are proprietary and protected as business intellectual property. No source code is published in this repository.
