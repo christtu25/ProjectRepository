@@ -3,6 +3,8 @@
 ## Professional Publications
 - VSA Business App
 - VSA Website
+- KAR Website
+- The Lillie's Pad Website
 
 ## Computer Science Projects
 - Terminal Executable Pet Adoption System
