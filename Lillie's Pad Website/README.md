@@ -47,6 +47,12 @@ The website helps the business by:
 
 ---
 
+## Design
+
+The visual identity for The Lillie's Pad was developed in collaboration with **Khloe Hudgins**, a graphic design student at Texas Tech University. Khloe designed the logo and guided the overall color palette and brand aesthetic — ensuring the site's look and feel reflected the warmth and natural character of the property. Her work established the foundation for all visual decisions across the platform, from typography choices to the earthy green and neutral tones used throughout the UI.
+
+---
+
 ## Platform Summary
 
 The production site was built with **Next.js 15** (App Router) and **TypeScript**, styled with **Tailwind CSS v4**, and deployed on **Vercel** with automatic deploys from GitHub. Backend integrations include **Firebase Admin SDK** (Firestore for form submissions), **Resend** (transactional email), and **iCal feed parsing** (Airbnb + Booking.com calendar sync). The domain is managed through **Vercel DNS** with SPF, DKIM, and DMARC records configured for Resend email delivery.
