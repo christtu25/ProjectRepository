@@ -5,6 +5,7 @@
 - VSA Website
 - KAR Website
 - The Lillie's Pad Website
+- Jojo's Toy Chest Website
 
 ## Computer Science Projects
 - Terminal Executable Pet Adoption System
